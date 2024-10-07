@@ -1,10 +1,12 @@
-function FoodPost() {
+import './FoodPost.css';
+
+function FoodPost(props) {
+    const { foods, closeCardItem } = props;
     return (
-        <div className=''>
-            <div></div>
+        <div className='pop__container' onClick={closeCardItem}>
             <div className="pop__desc">
-                <img className='item__image' src='/images/p1.png' />
-                <h4>xxx</h4>
+                <img className='item__image' src={foods.foodImg} />
+                <h4>{foods.title}</h4>
             </div>
         </div>
     );
